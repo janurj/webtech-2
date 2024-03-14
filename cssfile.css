@@ -32,3 +32,66 @@ body {
     padding: 20px;
     background-image:url("bg2.jpg");
   }
+  h3.col {
+    color: red;
+  }
+  
+  .photo {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+  }
+  
+  .menu {
+    padding: 20px;
+  }
+  
+  .menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 20px;
+    flex: 5;
+    margin: 150px;
+  }
+  
+  #about { background-color: #FFFDCB; }
+  #education { background-color: #FFE6E6; }
+  #area_of_interest { background-color: #F5E8DD; }
+  #skills { background-color: #FEFBF6; }
+  #project { background-color: #FFF7F1; }
+  #courses { background-color: #E3E1D9; }
+  #papers { background-color: #fcfcfc; }
+  #intern { background-color: #fefefe; }
+  #sw { background-color: #FFEDD8; }
+  
+  .education-table {
+    width: 90%;
+    border-collapse: collapse;
+  }
+  
+  .education-table th,
+  .education-table td {
+    padding-left: 10px;
+    text-align: center;
+  }
+  
+  .icon {
+    display: inline-block;
+  }
+  
+  .normal {
+    font-weight: normal;
+  }
+  
