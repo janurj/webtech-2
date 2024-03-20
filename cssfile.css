@@ -1,97 +1,177 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+.split {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: visible;
+}
+
+.left {
+  flex: 0 0 30%;
+  background-color: #333;
+  overflow-y: auto;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Added box shadow */
+}
+
+.left::-webkit-scrollbar {
+  width: 5px;
+}
+
+.left::webkit-scrollbar-track {
+  background: #333;
+}
+
+.right {
+  flex: 1;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+  padding: 20px;
+  background-image: url(bg3.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h3.col {
+  color: red;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+}
+
+.photo {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  transform: rotate(15deg); /* Added transformation */
+}
+
+.menu {
+  padding: 20px;
+}
+
+.menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s; /* Added color transition */
+}
+
+.menu a:hover {
+  background-color: #555;
+  color: #fff; /* Change text color on hover */
+}
+
+.content {
+  padding: 20px;
+  flex: 5;
+  margin: 150px;
+  animation: slideIn 1s ease forwards; /* Added animation */
+}
+
+#about {
+  background-color: #fffDCB;
+}
+
+#education {
+  background-color: #ffe6e6;
+}
+
+#area_of_interest {
+  background-color: #f5e8dd;
+}
+
+#skills {
+  background-color: #fefbf6;
+}
+
+#project {
+  background-color: #fff7f1;
+}
+
+#courses {
+  background-color: #e3e1d9;
+}
+
+#papers {
+  background-color: #fcfcfc;
+}
+
+#intern {
+  background-color: #fefefe;
+}
+
+#sw {
+  background-color: #ffedd8;
+}
+
+.education-table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.education-table th,
+.education-table td {
+  padding-left: 10px;
+  text-align: center;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .split {
-    display: flex;
-    height: 100vh;
-    justify-content:center;
-    overflow:visible;
+    flex-direction: column;
   }
-
-  .left {
-    flex: 0 0 30%;
-    background-color: #333;
-    overflow-y: auto; 
-    color: white;
-    position:relative;
-  }
-  .left::-webkit-scrollbar{
-    width:5px;
-  }
-  .left::webkit-scrollbar-track{
-    background:#333;
-  }
-
-  .right {
+  .left, .right {
     flex: 1;
-    background-color: #f1f1f1;
-    overflow-y: auto; 
-    padding: 20px;
-    background-image:url("bg2.jpg");
   }
-  h3.col {
-    color: red;
-  }
-  
-  .photo {
-    border-radius: 50%;
-    width: 130px;
-    height: 130px;
-    margin: auto;
-  }
-  
-  .menu {
-    padding: 20px;
-  }
-  
-  .menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
-    padding: 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .menu a:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 20px;
-    flex: 5;
-    margin: 150px;
-  }
-  
-  #about { background-color: #FFFDCB; }
-  #education { background-color: #FFE6E6; }
-  #area_of_interest { background-color: #F5E8DD; }
-  #skills { background-color: #FEFBF6; }
-  #project { background-color: #FFF7F1; }
-  #courses { background-color: #E3E1D9; }
-  #papers { background-color: #fcfcfc; }
-  #intern { background-color: #fefefe; }
-  #sw { background-color: #FFEDD8; }
-  
-  .education-table {
-    width: 90%;
-    border-collapse: collapse;
-  }
-  
-  .education-table th,
-  .education-table td {
-    padding-left: 10px;
-    text-align: center;
-  }
-  
-  .icon {
-    display: inline-block;
-  }
-  
-  .normal {
-    font-weight: normal;
-  }
-  
+}
+
+/* Additional Features */
+
+.content p {
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
+/* Add hover effect to .photo */
+.photo:hover {
+  transform: scale(1.1); /* Scale up the photo on hover */
+}
+
+/* Style the links within .content */
+.content a {
+  color: #007bff; /* Change link color */
+  text-decoration: underline; /* Add underline to links */
+}
+
+/* Style the headings within .content */
+.content h2 {
+  font-size: 24px; /* Increase font size for h2 */
+  color: #333; /* Change heading color */
+  margin-bottom: 10px; /* Add margin bottom for separation */
+}
